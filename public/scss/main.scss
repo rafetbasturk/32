@@ -1,0 +1,385 @@
+@import "config";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $grayish_violet;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    padding: 4rem 2.5rem 0;
+    max-width: 1440px;
+    margin: auto;
+
+    &__menu {
+        margin-bottom: 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--hamburger {
+            display: flex;
+
+            #close {
+                display: none;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+        background: $pri-d-violet;
+        padding: 2.2rem 2.5rem 2.8rem;
+        border-radius: 10px;
+        position: absolute;
+        width: calc(100% - 5rem);
+
+        a {
+            @include a;
+
+            &:hover {
+                color: $grayish_violet;
+                transform: rotateX(30deg);
+            }
+        }
+
+        &--right {
+            
+            a {
+                &:last-of-type {
+                    @include btn-cyan;
+
+                    &:hover {
+                        transform: none;
+                        color: white;
+                        filter: saturate(50%);
+                    }
+                }
+            }
+        }
+
+        hr {
+            margin: 1.6rem 0;
+            border: none;
+            border-bottom: 1px solid $grayish_violet
+        }
+    }
+}
+
+.working {
+    padding: 0 0 0 2.5rem;
+    max-width: 1440px;
+    margin: auto;
+
+    &__img {
+        width: 100%;
+        height: 338px;
+        background: url(../images/illustration-working.svg) no-repeat;
+        background-size: cover;
+    }
+
+    &__body {
+        padding: 4rem 2.5rem 4rem 0;
+        text-align: center;
+
+        h1 {
+            color: $pri-d-violet;
+            font-size: 4.2rem;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        a {
+            @include a;
+            background: $pri-cyan;
+            padding: 1.5rem 0;
+            width: 200px;
+            margin: auto;
+            border-radius: 28px;
+            margin-top: 2.4rem;
+
+            &:hover {
+                transform: none;
+                filter: saturate(50%);
+            }
+        }
+        
+    }
+}
+
+.main {
+    background: linear-gradient(180deg, white 0, white 125px, hsl(257, 30%, 95%) 125px, hsl(257, 30%, 95%) 100%);
+    padding: 4.5rem 2.5rem;
+    max-width: 1440px;
+    margin: auto;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 2.4rem;
+        background: url(../images/bg-shorten-mobile.svg) top right no-repeat, $pri-d-violet;
+        background-size: 75% 70%;
+        border-radius: 10px;
+
+        &__div {
+            display: flex;
+            flex-direction: column;
+
+            &--input {
+                border: 3px solid transparent;
+                border-radius: 5px;
+                padding: 1.2rem;
+                margin-bottom: .5rem;
+                font-size: 1.6rem;
+                color: $pri-d-violet;
+            }
+    
+            &--error {
+                font-size: 1.2rem;
+                color: $red;
+                margin-bottom: .5rem;
+                display: none;
+            }
+        }
+
+        &__button {
+            @include a;
+            padding: 1.4rem;
+            background: $pri-cyan;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            letter-spacing: 1px;
+
+            &:hover {
+                transform: none;
+                cursor: pointer;
+                filter: saturate(50%);
+            }
+        }
+    }
+
+    &__shortened {
+        background: white;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        margin: 2.4rem 0;
+
+        &__address {
+
+            &--value{
+                padding: 1.5rem 1.5rem 1rem;
+                color: $v-d-violet;
+                border-bottom: 1px solid $gray;
+            }
+    
+            &--result{
+                color: $pri-cyan;
+                padding: 1.2rem 1.5rem;
+            }
+        }
+
+        &__copy {
+            padding: 0 1.5rem 1.5rem;
+
+            a {
+                @include a;
+                @include btn-cyan;
+                padding: .8rem;
+                margin: 0;
+                border-radius: 5px;
+
+                &:hover {
+                    transform: none;
+                    filter: saturate(50%);
+                }
+            }
+        }
+    }
+}
+
+.section {
+    padding: 4.5rem 2.5rem;
+    background: hsl(257, 30%, 95%);
+    text-align: center;
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+
+    &__body {
+
+        &--heading {
+            color: $pri-d-violet;
+            font-size: 2.75rem;
+            margin-bottom: 1.8rem;
+        }
+    
+        &--text {
+            font-size: 1.6rem;
+            line-height: 1.8;
+        }
+    }
+
+    &__cards {
+
+        &__card {
+            background: white;
+            border-radius: 5px;
+            padding: 7.5rem 2.5rem 4rem;
+            position: relative;
+            margin: 9rem 0;
+            z-index: 5;
+    
+            &:nth-of-type(3) {
+                margin-bottom: 3.2rem;
+            }
+    
+            &--div {
+                background: $pri-d-violet;
+                width: 88px;
+                height: 88px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+    
+            &--heading {
+                color: $pri-d-violet;
+                margin-bottom: 1.8rem;
+            }
+    
+            &--text {
+                font-size: 1.5rem;
+                line-height: 1.8
+            }
+        }
+
+        &__line {
+            width: 10px;
+            height: 450px;
+            background: $pri-cyan;
+            position: absolute;
+            bottom: 380px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+aside {
+    padding: 10rem 0 9rem;
+    background: url(../images/bg-boost-mobile.svg) no-repeat, $pri-d-violet;
+    background-size: cover;
+    text-align: center;
+    max-width: 1440px;
+    margin: auto;
+
+    h2 {
+        color: white;
+    }
+
+    a {
+        @include a;
+        background: $pri-cyan;
+        padding: 1.5rem 0;
+        width: 200px;
+        margin: auto;
+        border-radius: 28px;
+        margin-top: 1.5rem;
+
+        &:hover {
+            transform: none;
+            filter: saturate(50%);
+        }
+    }
+}
+
+.footer {
+    background: $v-d-violet;
+    text-align: center;
+    padding: 5.5rem 0;
+
+    &__container {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    &__nav {
+        padding: 2rem;
+
+        ul {
+            list-style: none;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        li {
+            color: white;
+            
+            &:first-of-type {
+                padding: 2rem;
+            }
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: $gray;
+            margin-bottom: 1rem;
+
+            &:hover {
+                transform: rotateX(30deg);
+                color: $pri-cyan;
+            }
+        }
+    }
+
+    &__social {
+        padding: 1rem;
+
+        svg {
+            margin: 0 1rem;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+                path {
+                    fill: $pri-cyan;
+                }
+            }
+        }
+    }
+
+    &__attribution {
+        font-size: 1.2rem;
+        margin-top: 3rem;
+
+        a {
+            color: white;
+
+            &:hover {
+                color: $pri-cyan;
+            }
+        }
+    }
+}
+
+@import "responsive";

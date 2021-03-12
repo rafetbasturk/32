@@ -1,0 +1,24 @@
+{
+  "name": "shorten",
+  "version": "1.0.0",
+  "description": "![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shorten",
+    "links"
+  ],
+  "author": "Rafet Basturk",
+  "license": "MIT",
+  "engines": {
+    "node": "14.15.4"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
+}

@@ -1,0 +1,17 @@
+<%- include("partials/top"); -%>
+
+<% if (contents.length > 0) { %>
+  <% contents.forEach(content => { %>
+    <div class="main__shortened">
+      <div class="main__shortened__address">
+        <p class="main__shortened__address--value"><%= content.startingUrl %></p>
+        <p class="main__shortened__address--result"><%= content.shortened %></p>
+      </div>
+      <div class="main__shortened__copy">
+        <a href="#" class="copy">Copy</a>
+      </div>
+    </div>
+  <% }) %>
+<% } %>
+
+<%- include("partials/bottom"); -%>

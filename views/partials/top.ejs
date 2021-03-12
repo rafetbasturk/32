@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__menu">
+      <img src="/images/logo.svg" alt="logo">
+      <div class="header__menu--hamburger">
+        <img id="hamburger" src="/images/icon-hamburger.svg" alt="icon-hamburger">
+        <img id="close" src="/images/icon-close.svg" alt="icon-close">
+      </div>
+    </div>
+    <nav class="header__nav">
+      <div class="header__nav--left">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+      </div>
+      <hr>
+      <div class="header__nav--right">
+        <a href="#">Login</a>
+        <a href="#">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="working">
+    <div class="working__img"></div>
+    <div class="working__body">
+      <h1>More than just shorter links</h1>
+      <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+      <a href="#">Get Started</a>
+    </div>
+  </div>
+
+  <main class="main" id="main">
+    <form action="/" method="post" class="main__form">
+      <div class="main__form__div">
+        <input type="url" name="shorten" class="main__form__div--input" placeholder="Shorten a link here..." tabIndex=1>
+        <i class="main__form__div--error">Please add a link</i>
+      </div>
+      <button type="submit" class="main__form__button" aria-label="shorten link">Shorten It!</button>
+    </form>
