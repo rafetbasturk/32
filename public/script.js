@@ -27,7 +27,7 @@ btn.addEventListener("click", (e) => {
         setTimeout(() => {
             i.style.display = "none"
             inp.style.borderColor = "transparent"
-        }, 5000)
+        }, 4000)
     }
 })
 
@@ -50,6 +50,11 @@ document.querySelector(".main").addEventListener("click", (e) => {
         setTimeout(() => {
             e.target.style.background = "hsl(180, 66%, 49%)"
             e.target.innerText = "Copy"
-        }, 5000)
+        }, 4000)
     }
 })
+
+// code to prevent to send the form again with refresh
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}

@@ -22,7 +22,6 @@ app.post('/', (req, res) => {
         try {
             const response = await fetch(postUrl)
             const data = await response.json()
-            console.log(data.ok)
             let result = ""
             if (inputUrl.indexOf("https") === 0) {
                 result = {startingUrl: data.result.original_link, shortened: "https://rafet/" + data.result.code}
